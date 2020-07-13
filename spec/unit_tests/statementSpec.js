@@ -58,7 +58,8 @@ describe('statment', function() {
     })
 
     it('pulls together a statement', function() {
-        var text = 'date || credit || debit || balance\/n13/07/2020 || || 20.00 || 50.00\/n13/07/2020 || 20.00 || || 50.00';
-        expect(statement.printStatement()).toEqual(text)
+        var text = ['date || credit || debit || balance', '13/07/2020 || || 20.00 || 50.00', '13/07/2020 || 20.00 || || 50.00'];
+        statement.printStatement()
+        expect(statement.getStatementArray()).toEqual(text)
     })
 })
