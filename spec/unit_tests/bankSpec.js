@@ -12,7 +12,9 @@ describe('bank', function() {
         expect(bank.getAccounts()).toEqual([])
     })
 
-    it('should create a new instance of account', function() {
-
+    it('should add a new value to account array', function() {
+        bank.createAccount()
+        var accounts = bank.getAccounts()
+        expect(accounts[0]).toEqual(1)
     })
 })
