@@ -17,4 +17,14 @@ describe('account', function() {
         expect(account.getRecord()).toEqual([])
     })
 
+    it('should add to record on deposit', function() {
+        account.deposit(1);
+        expect(account.getRecord()[0]).toEqual(1)
+    })
+
+    it('should add to record on withdraw', function() {
+        account.withdraw(1);
+        expect(account.getRecord()[0]).toEqual(1)
+    })
+
 })
