@@ -13,4 +13,8 @@ describe('account', function() {
         expect(account.getBalance()).toEqual(0)
     })
 
+    it('should hold a record which is an emty array', function() {
+        expect(account.getRecord()).toEqual([])
+    })
+
 })
