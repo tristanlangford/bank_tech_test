@@ -1,5 +1,6 @@
 'use strict';
 var Account = require('../../lib/account')
+var Interaction = require('../../lib/account_interaction')
 
 describe('account', function() {
 
@@ -17,14 +18,24 @@ describe('account', function() {
         expect(account.getRecord()).toEqual([])
     })
 
-    it('should add to record on deposit', function() {
-        account.deposit(1);
-        expect(account.getRecord()[0]).toEqual(1)
+    it('should store an interaction instance on deposit', function() {
+        account.deposit(10);
+        expect(account.getRecord()[0] instanceof Interaction).toBe(true)
     })
 
-    it('should add to record on withdraw', function() {
+    it('should remove from balance on withdraw', function() {
         account.withdraw(1);
-        expect(account.getRecord()[0]).toEqual(1)
+        expect(account.getBalance()).toEqual(-1)
+    })
+
+    it('should increase balance on deposit', function() {
+        account.deposit(1);
+        expect(account.getBalance()).toEqual(1)
+    })
+
+    it('should store an interaction instance on withdraw', function() {
+        account.withdraw(10);
+        expect(account.getRecord()[0] instanceof Interaction).toBe(true)
     })
 
 })
