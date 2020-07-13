@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "istanbul cover --include-all-sources jasmine-node spec"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jasmine": "^3.5.0"
+    "istanbul": "^0.4.5",
+    "jasmine": "^3.5.0",
+    "jasmine-node": "^3.0.0",
+    "mockdate": "^3.0.2"
   }
 }

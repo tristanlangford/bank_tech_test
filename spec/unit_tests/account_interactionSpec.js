@@ -1,16 +1,17 @@
 'use strict';
 var Interaction = require('../../lib/account_interaction')
+var MockDate = require('mockdate')
 
 describe('interaction', function() {
     let interaction
 
     beforeEach(function() {
+        MockDate.set('01/01/2020');
         interaction = new Interaction(0, 10);
     });
 
     it('holds the current date on creation', function() {
-        let today = new Date();
-        expect(interaction.getDate()).toEqual(today)
+        expect(interaction.getDate()).toEqual(new Date())
     })
 
     it('holds the amount withdrawn', function() {
