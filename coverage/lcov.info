@@ -33,14 +33,14 @@ end_of_record
 TN:
 SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/lib/account_interaction.js
 FN:3,(anonymous_1)
-FN:5,(anonymous_2)
+FN:5,Interaction
 FN:11,(anonymous_3)
 FN:15,(anonymous_4)
 FN:19,(anonymous_5)
 FNF:5
 FNH:5
 FNDA:1,(anonymous_1)
-FNDA:7,(anonymous_2)
+FNDA:7,Interaction
 FNDA:1,(anonymous_3)
 FNDA:1,(anonymous_4)
 FNDA:1,(anonymous_5)
@@ -156,7 +156,7 @@ end_of_record
 TN:
 SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/lib/statement.js
 FN:3,(anonymous_1)
-FN:5,(anonymous_2)
+FN:5,Statement
 FN:10,(anonymous_3)
 FN:23,(anonymous_4)
 FN:27,(anonymous_5)
@@ -165,7 +165,7 @@ FN:38,(anonymous_7)
 FNF:7
 FNH:7
 FNDA:1,(anonymous_1)
-FNDA:5,(anonymous_2)
+FNDA:5,Statement
 FNDA:1,(anonymous_3)
 FNDA:4,(anonymous_4)
 FNDA:5,(anonymous_5)
