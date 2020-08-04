@@ -2,11 +2,12 @@
 var Statement = require('../../lib/statement')
 
 describe('statment', function() {
+
     let statement 
     
     function Withdraw() {
         Withdraw.prototype.getDate = function() {
-            return new Date('2020-07-13T14:00:00.7062')
+            return new Date('2020-07-01T14:00:00.7062')
         }
         Withdraw.prototype.getAmount = function() {
             return -20
@@ -46,7 +47,7 @@ describe('statment', function() {
     })
 
     it('should put a withdrawal as a debit on the statement', function() {
-        var text = `13/07/2020 || || 20.00 || 50.00`
+        var text = `01/07/2020 || || 20.00 || 50.00`
         statement.printWithdraw(withdraw)
         expect(statement.getStatementArray()[1]).toEqual(text)
     })
@@ -57,8 +58,12 @@ describe('statment', function() {
         expect(statement.getStatementArray()[1]).toEqual(text)
     })
 
-    it('pulls together a statement', function() {
-        var text = ['date || credit || debit || balance', '13/07/2020 || || 20.00 || 50.00', '13/07/2020 || 20.00 || || 50.00'];
+    it('sorts the records Array into date order', function() {
+        expect(statement.sortRecordsByDate([withdraw, deposit])).toEqual([deposit, withdraw])
+    })
+
+    it('pulls together a statement and shows in date desending order', function() {
+        var text = ['date || credit || debit || balance', '13/07/2020 || 20.00 || || 50.00', '01/07/2020 || || 20.00 || 50.00'];
         statement.printStatement()
         expect(statement.getStatementArray()).toEqual(text)
     })
