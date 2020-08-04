@@ -10,8 +10,18 @@ describe('account', function() {
         }
     }
 
+    class mockStatement {
+        constructor(record) {
+
+        }
+
+        printStatement() {
+            return "Printed Statement"
+        }
+    }
+
     beforeEach(function() {
-        account = new Account(mockInteraction)
+        account = new Account(mockInteraction, mockStatement)
     })
 
     it('to have a stating balance at 0', function() {
@@ -40,6 +50,10 @@ describe('account', function() {
     it('should store an interaction instance on withdraw', function() {
         account.withdraw(10);
         expect(account.getRecord()[0] instanceof mockInteraction).toBe(true)
+    })
+
+    it('should call printStatement', function() {
+        expect(account.printStatement()).toEqual("Printed Statement")
     })
 
 })
