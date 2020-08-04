@@ -1,12 +1,55 @@
-### Bank Tech Test
+### Bank Tech Test - Node.js
+
+A small project designed to highlight my code quality and process. [source](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md)
+
+It allows you to create an account, deposit, withdraw, and print statements.
 
 ## To run 
-- In terminal:
-    - npm install
-    - node
-        - var Account = require('/lib/account')
-        - var *yourAccountName* = new Account()
 
+1. Clone this repo.
+
+2. Install dependencies with:
+
+   ```shell
+   npm install
+   ```
+
+3. Run tests with:
+
+   ```shell
+   npm test
+   ```
+
+4. Run the Node REP:
+
+   ```js
+   node
+   ```
+
+5. Require `account.js`:
+
+   ```js
+   const Account = require("./src/account.js")
+   ```
+
+6. Create an account with:
+
+   ```js
+   let account = new Account();
+   ```
+
+7. Use the account with the following methods:
+
+| Method                     | Description                                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| `account.deposit(number)`  | deposit however much you want into your account, this figure is in pounds with pence as decimals.  |
+| `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
+| `account.statement()`      | prints a statement of all transactions so far                                                      |
+
+ ## Example Screenshot
+
+ ![Example Screenshot](Bank_Tech_Test_Example_Screenshot.png)
+ 
  ## To run tests
  - npm test
 
