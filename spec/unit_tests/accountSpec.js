@@ -1,5 +1,5 @@
 'use strict';
-var Account = require('../../lib/account')
+var Account = require('../../src/account')
 
 describe('account', function() {
 

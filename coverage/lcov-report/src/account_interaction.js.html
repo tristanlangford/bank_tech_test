@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for lib/account.js</title>
+    <title>Code coverage report for src/account_interaction.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">lib/</a> account.js
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> account_interaction.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/22</span>
+        <span class='fraction'>12/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/22</span>
+        <span class='fraction'>12/12</span>
       </div>
     </div>
   </div>
@@ -67,52 +67,24 @@
 22
 23
 24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+25</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-yes">7×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,42 +92,28 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
-const Interaction = require('./account_interaction');
-const Statement = require('./statement');
 &nbsp;
-(function (exports) {
+(function(exports) {
 &nbsp;
-    function Account(interactionClass = Interaction, statementClass = Statement) {
-        this._balance = 0;
-        this._record = [];
-        this._interactionClass = interactionClass
-        this._statementClass = statementClass
+    function Interaction(balance, amount) {
+        this._balance = balance;
+        this._amount = amount;
+        this._date = new Date()
     }
 &nbsp;
-    Account.prototype.getBalance = function() {
+    Interaction.prototype.getDate = function() {
+        return this._date
+    }
+&nbsp;
+    Interaction.prototype.getAmount = function() {
+        return this._amount
+    }
+&nbsp;
+    Interaction.prototype.getBalance = function() {
         return this._balance
     }
 &nbsp;
-    Account.prototype.getRecord = function() {
-        return this._record
-    }
-&nbsp;
-    Account.prototype.deposit = function(integer) {
-        this._balance += integer;
-        this._record.push(new this._interactionClass(this._balance, integer))
-    }
-&nbsp;
-    Account.prototype.withdraw = function(integer) {
-        this._balance -= integer;
-        this._record.push(new this._interactionClass(this._balance, -integer));
-    }
-&nbsp;
-    Account.prototype.printStatement = function() {
-        var statement = new this._statementClass(this._record);
-        return statement.printStatement()
-    }
-&nbsp;
-    module.exports = Account
+    module.exports = Interaction
 })(this)
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -163,7 +121,7 @@ const Statement = require('./statement');
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 04 2020 16:54:33 GMT+0100 (British Summer Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 04 2020 16:55:52 GMT+0100 (British Summer Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

@@ -1,5 +1,5 @@
 'use strict';
-var Interaction = require('../../lib/account_interaction')
+var Interaction = require('../../src/account_interaction')
 var MockDate = require('mockdate')
 
 describe('interaction', function() {

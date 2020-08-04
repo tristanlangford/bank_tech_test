@@ -1,5 +1,5 @@
 'use strict';
-var Statement = require('../../lib/statement')
+var Statement = require('../../src/statement')
 
 describe('statment', function() {
 

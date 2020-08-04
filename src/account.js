@@ -1,11 +1,13 @@
 'use strict';
+const Interaction = require('./account_interaction');
+const Statement = require('./statement');
 
 (function (exports) {
 
-    function Account(interactionCLass, statementClass) {
+    function Account(interactionClass = Interaction, statementClass = Statement) {
         this._balance = 0;
         this._record = [];
-        this._interactionClass = interactionCLass
+        this._interactionClass = interactionClass
         this._statementClass = statementClass
     }
 
