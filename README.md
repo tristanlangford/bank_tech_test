@@ -51,9 +51,13 @@ It allows you to create an account, deposit, withdraw, and print statements.
  ![Example Screenshot](images/Bank_Tech_Test_Example_Screenshot.png)
  
  ## To run tests
+ 
  - npm test
 
  ## Approach 
+
+    
+
  Decided to that there are three clear classes, the account itself which holds the balance and a record of actions, an action on that account (deposit or withdrawal), and a statement class that would print the statement.
  Followed TDD process using Jasmine, starting with Account, then Account_interaction, and finally statement.
  Used Jasmine's coverage check with istanbul to check coverage.

@@ -1,5 +1,5 @@
 TN:
-SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/unit_tests/account_interactionSpec.js
+SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/account_interactionSpec.js
 FN:5,(anonymous_1)
 FN:8,(anonymous_2)
 FN:13,(anonymous_3)
@@ -62,7 +62,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/unit_tests/accountSpec.js
+SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/accountSpec.js
 FN:4,(anonymous_1)
 FN:9,(anonymous_2)
 FN:14,(anonymous_3)
@@ -226,7 +226,7 @@ BRF:6
 BRH:3
 end_of_record
 TN:
-SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/unit_tests/statementSpec.js
+SF:/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test/spec/statementSpec.js
 FN:4,(anonymous_1)
 FN:8,Withdraw
 FN:9,(anonymous_3)
