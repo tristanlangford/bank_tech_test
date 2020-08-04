@@ -1,13 +1,17 @@
 'use strict';
 var Account = require('../../lib/account')
-var Interaction = require('../../lib/account_interaction')
 
 describe('account', function() {
 
     let account
 
+    class mockInteraction {
+        constructor(balance, integer) {
+        }
+    }
+
     beforeEach(function() {
-        account = new Account
+        account = new Account(mockInteraction)
     })
 
     it('to have a stating balance at 0', function() {
@@ -20,7 +24,7 @@ describe('account', function() {
 
     it('should store an interaction instance on deposit', function() {
         account.deposit(10);
-        expect(account.getRecord()[0] instanceof Interaction).toBe(true)
+        expect(account.getRecord()[0] instanceof mockInteraction).toBe(true)
     })
 
     it('should remove from balance on withdraw', function() {
@@ -35,7 +39,7 @@ describe('account', function() {
 
     it('should store an interaction instance on withdraw', function() {
         account.withdraw(10);
-        expect(account.getRecord()[0] instanceof Interaction).toBe(true)
+        expect(account.getRecord()[0] instanceof mockInteraction).toBe(true)
     })
 
 })
