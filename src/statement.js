@@ -16,6 +16,7 @@
                 this.printDeposit(record)
             }
         });
+        console.log(this._statementArray.join("\n"));
     }
 
     Statement.prototype.getStatementArray = function() {
