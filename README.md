@@ -40,7 +40,7 @@ It allows you to create an account, deposit, withdraw, and print statements.
 
 7. Use the account with the following methods:
 
-| Method                     | Description                                                                                        |
+| Function                     | Description                                                                                        |
 | -------------------------- | -------------------------------------------------------------------------------------------------- |
 | `account.deposit(number)`  | deposit however much you want into your account, this figure is in pounds with pence as decimals.  |
 | `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
