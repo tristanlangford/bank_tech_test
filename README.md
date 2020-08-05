@@ -49,10 +49,6 @@ It allows you to create an account, deposit, withdraw, and print statements.
 ## Example Screenshot
 
 ![Example Screenshot](images/Bank_Tech_Test_Example_Screenshot.png)
- 
-## To run tests
-
-- npm test
 
 ## Approach 
 
