@@ -2,7 +2,7 @@
 
 A small project designed to highlight my code quality and process. [source](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md)
 
-I have also completed this tech test in [Ruby](https://github.com/tristanlangford/bank_tech_test_ruby)
+I have also completed this tech test in [Ruby](https://github.com/tristanlangford/bank_tech_test_ruby) and [C#](https://github.com/tristanlangford/bank_tech_test_C)
 
 It allows you to create an account, deposit, withdraw, and print statements.
 
